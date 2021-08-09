@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "lato";
+}
+
+/* navigation */
+
+.navigation-container {
+    height: 80px;
+    background: #2A9D8F;
+    box-shadow: 0px 9px 16px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 25px 25px;
+    transition: 2000ms;
+    }
+    
+    .wrapper {
+        width: 1300px;
+        margin: 0 auto;
+    }
+    
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+        transition: 2000ms;
+    }
+    
+    nav ul {
+        display: flex;
+    }
+    
+    nav .portofolio li {
+    list-style: none;
+    margin-left: -40px;
+    transition: 2000ms;
+    }
+    
+    nav .portofolio li a {
+        font-family: Poppins, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    color: #FFFFFF;
+    text-decoration: none;
+    }
+    
+    .navigation-items li {
+        list-style: none;
+        margin-right: 35px;
+        transition: 2000ms;
+    }
+    
+    .navigation-items li:nth-last-of-type(1) {
+        margin-right: 0px;
+    }
+    
+    .navigation-items li a {
+        font-family: Poppins, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-decoration: none;
+    }
+
+/* Project */                                
+
+header .atas {
+    width: 1300px;
+}
+.atas {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    text-align:center;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: center;
+    transition: 2000ms;
+
+color: #264653;
+}
+
+.foto {
+    display: flexbox;
+    align-items: center;
+    margin-top: 50px;
+    
+    
+}
+
+.baris1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    transition: 2000ms;
+}
+
+.baris2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    transition: 2000ms;
+}
+
+.baris3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    transition: 2000ms;
+}
+
+.baris4 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    transition: 2000ms;
+}
+
+.baris5 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    transition: 2000ms;
+}
+
+.see {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+
+}
+
+.see a {
+    text-align: center;
+    align-items: center;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 28px;
+    text-decoration: none;
+    color: #264653;
+
+    background: #E76F51;
+    padding: 10px 40px;
+    border-radius: 49px;
+    transition: 300ms;
+
+}
+
+.see a:hover {
+    transform: translatey(-10px);
+}
+
+/* sosmed */
+
+.sosmed {
+    display: flex;
+    align-items: center;
+    height: 200px;
+    justify-content: center;
+}
+
+.sosmed a {
+    margin-bottom: 0;
+    margin-top: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    transition: 300ms;
+}
+
+.sosmed a:nth-last-of-type(1) {
+    margin-right: 0px;
+}
+
+.sosmed a:hover {
+    transform: translatey(-10px);
+}
+

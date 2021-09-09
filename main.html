@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<!--Container-->
+
+<body>
+    <div class="navigation">
+        <div class="wrapper">
+            <nav>
+                <ul>
+                   <li class="logo">PORTOFOLIO</li>
+                   <li class="items"><a href="#about">ABOUT</a></li>
+                   <li class="items"><a href="#project">PROJECT</a></li>
+                   <li class="items"><a href="#skill">SKILLS</a></li>
+                   <li class="items"><a href="#contact">CONTACT</a></li>
+                   <li class="items"><a href="https://drive.google.com/file/d/1BJ7LRc6tTqzBOh69SrTVt2zno-2ry_HY/view?usp=sharing" target="_blank"><span class="resume">RESUME</span></a></li>
+                   <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
+                </ul>
+             </nav>
+             <script>
+                $(document).ready(function(){
+                  $('.btn').click(function(){
+                    $('.items').toggleClass("show");
+                    $('ul li').toggleClass("hide");
+                  });
+                });
+             </script>
+        </div>
+    </div>
+    
+
+<!--Bagian Home-->
+
+    <div id="home" class="home">
+        <div class="wrapper">
+            <div class="animation"> 
+                <span class="first">Hi!</span>
+                <span class="slidee">
+                    <span class="second">I'm Afdalio Reza</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!--About-->
+    <div id="about" class="about">
+        <div class="wrapper">
+            <div class="about-content">
+                <div class="diatas">
+                    <a>ABOUT</a>
+                </div>
+                <div class="tengah">
+                    <div class="kiri">
+                        <img src="Image/dol.png"
+                        width="600px"
+                        height="750px">
+                    </div>
+                    <div class="kanan">
+
+                        <p class="nama">
+                            My name is Afdalio Reza Nadiwa
+                        </p>
+
+                        <p class="deskripsi">
+                            an undergraduate student majoring in Electrical Engineering at the University of Indonesia expertise in graphic design, video editing, and currently learning website development. 
+                            A creative person who love to learn new things, a fast learner, and team player with good communication
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            
+        </div>
+    </div>
+
+    <!--Image Slider-->
+
+    <div id="project" class="isi-project">
+        <div class="wrapper">
+            <div class="project">
+                <div class="atas">
+                    <a>PROJECT</a>
+                </div>
+            </div>
+
+            <div class="konten">
+                <div class="slider">
+                    <div class="slides">
+                        <input type="radio" name="button" id="radio1">
+                        <input type="radio" name="button" id="radio2">
+                        <input type="radio" name="button" id="radio3">
+                        <input type="radio" name="button" id="radio4">
+                        <input type="radio" name="button" id="radio5">
+                        <input type="radio" name="button" id="radio6">
+                
+                        <div class="slide satu">
+                            <img src="Image/pr1.png">
+                        </div>
+                        <div class="slide">
+                            <img src="Image/pr2.png">
+                        </div>
+                        <div class="slide">
+                            <img src="Image/pr3.png">
+                        </div>
+                        <div class="slide">
+                            <img src="Image/pr4.png">
+                        </div>
+                        <div class="slide">
+                            <img src="Image/pr5.png">
+                        </div>
+                        <div class="slide">
+                            <img src="Image/pr6.png">
+                        </div>
+                
+                        <div class="auto">
+                            <div class="autobutton1"></div>
+                            <div class="autobutton2"></div>
+                            <div class="autobutton3"></div>
+                            <div class="autobutton4"></div>
+                            <div class="autobutton5"></div>
+                            <div class="autobutton6"></div>
+                        </div>
+                
+                        <div class="manual">
+                            <label for="radio1" class="manualbtn"></label>
+                            <label for="radio2" class="manualbtn"></label>
+                            <label for="radio3" class="manualbtn"></label>
+                            <label for="radio4" class="manualbtn"></label>
+                            <label for="radio5" class="manualbtn"></label>
+                            <label for="radio6" class="manualbtn"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="bgphoto">
+                    <div class="overlay">
+                        <img src="Image/Rectangle.png" alt=""
+                        width="901px"
+                        height="480px">
+                    </div>    
+                </div>
+                
+            </div>
+
+            <script type="text/javascript">
+            var counter = 1;
+            setInterval(function(){
+                document.getElementById('radio' + counter).checked = true;
+                counter++;
+                if(counter  > 6){
+                    counter = 1;
+                }
+            },5000);
+            </script>
+        </div>    
+    </div>
+
+    <!--Skills-->
+    <div id="skill" class="skill">
+        <div class="wrapper">
+            <div class="tulisan">
+                <a class="judul">SKILLS</a>
+            </div>
+
+            <div class="paragraf">
+
+                <p class="cerita">
+                    I started to have an interest in multimedia since junior high school. 
+                    Since then I have learned various things related to graphic design and video editing so that I have become quite proficient in both. 
+                    in college I majored in electrical engineering where there is coding as one of the courses. That's why I started researching and learning about code. 
+                    With my interest in design, I became interested in website design or UI/UX and tried to create a website for myself. 
+                    Until now I am still learning and exploring all about website design to become better and more proficient.
+                </p>
+            </div>
+
+            <div class="jelas">
+                <a class="ini">This is the things I'm Pretty good at:</a>
+            </div>
+
+            <div class="gambar">
+                <div class="baris1">
+                    <img src="skills/1.png" alt="">
+                    <img src="skills/2.png" alt="">
+                    <img src="skills/3.png" alt="">
+                    <img src="skills/4.png" alt="">
+                </div>
+                <div class="baris2">
+                    <img src="skills/5.png" alt="">
+                    <img src="skills/6.png" alt="">
+                    <img src="skills/7.png" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+<footer>
+<div id="contact"  class="kontak-info">
+    <div class="wrapper">
+        <div class="kontak">
+            <div class="penjelasan">
+                <a> Contact Info</a>
+            </div>
+    
+            <div class="email">
+                <a>For further discussion, you can email me to <A class="imel" href="mailto:afdalior@gmail.com" > afdalior@gmail.com </A></a>
+            </div>
+    
+        </div>
+        
+        <div class="gambar">
+                <div class="sosmed">   
+                <a href="https://www.instagram.com/afdalior/" target="_blank">
+                <img src="Image/ig.png" alt=""
+                width="40px"
+                height="40px">
+                </a>
+            <a href="https://twitter.com/afdalior" target="_blank">
+                <img src="Image/twt.png" alt=""
+                width="49.26px"
+                height="40px">
+            </a>
+            <a href="https://www.linkedin.com/in/afdalio-reza-988097140/" target="_blank">
+                <img src="Image/linked.png" alt=""
+                width="40.18px"
+                height="40px">
+            </a>
+            <a href="https://wa.me/6281381208753" target="_blank">
+                <img src="Image/wa.png" alt="">
+                
+            </a>
+            
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+    
+</footer>
+
+
+
+
+
+</html>

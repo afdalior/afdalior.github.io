@@ -1,302 +1,539 @@
-* {
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none; 
+    scroll-behavior:smooth ;
 }
 
-body {
-    font-family: "lato";
+.wrapper{
+    width: 100%;
+    max-width: 1068px;
+    margin: auto;
+    padding: 0 80px;
 }
 
-/* navigation */
+/*Navigation Bar*/
 
-.navigation-container {
-height: 80px;
-background: #2A9D8F;
-box-shadow: 0px 9px 16px 3px rgba(0, 0, 0, 0.25);
-border-radius: 0px 0px 25px 25px;
-animation: movedown 1s linear 1 ;
-animation-delay: 0.5s;
-visibility: hidden;
-animation-fill-mode: forwards;
+.navigation{
+    position: fixed;
+    width: 100%;
+    background-color: #2F3676;
+    z-index: 100;
+    font-family: 'roboto';
 }
-
-
-.wrapper {
-    width: 1300px;
-    margin: 0 auto;
-}
-
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
-}
+    padding: 0px 0px;
+  }
 
-nav ul {
-    display: flex;
-}
-
-nav .portofolio li {
-list-style: none;
-margin-left: -40px;
-animation: movedown 1s linear 1 ;
-animation-delay: 0.5s;
-visibility: hidden;
-animation-fill-mode: forwards;
-}
-
-
-
-nav .portofolio li a {
-    font-family: Poppins, sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 50px;
-color: #FFFFFF;
-text-decoration: none;
-}
-
-.navigation-items li {
+  nav ul{
     list-style: none;
-    margin-right: 35px;
-    animation: movedown 1s linear 1 ;
-    animation-delay: 1s;
-visibility: hidden;
-animation-fill-mode: forwards;
-}
-
-@keyframes movedown {
-    0%{
-        transform: translateY(-100px);
-        visibility: visible;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  nav ul li{
+    padding: 15px 0;
+    cursor: pointer;
+  }
+  nav ul li.items{
+    position: relative;
+    width: auto;
+    margin: 0 16px;
+    text-align: center;
+    order: 3;
+  }
+  
+  nav ul li.items:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 5px;
+    height: 2px;
+    width: 100%;
+    background: #33ffff;
+    opacity: 0;
+    transition: all 0.2s linear;
+  }
+  nav ul li.items:hover:after{
+    opacity: 1;
+    bottom: 8px;
+  }
+  nav ul li.logo {
+    flex: 1;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    cursor: default;
+    user-select: none;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    transition: .4s;
+  }
+  nav ul li:hover a{
+    color: cyan;
+  }
+  nav ul li i{
+    font-size: 23px;
+  }
+  nav ul li.btn{
+    display: none;
+  }
+  nav ul li.btn.hide i:before{
+    content: '\f00d';
+  }
+  @media all and (max-width: 900px){
+    nav{
+      padding: 5px 30px;
     }
-    100%{
-        transform: translateY(0px);
-        visibility: visible;
+    nav ul li.items{
+      width: 100%;
+      display: none;
     }
-}
+    nav ul li.items.show{
+      display: block;
+    }
+    nav ul li.btn{
+      display: block;
+    }
+    nav ul li.items:hover{
+      border-radius: 5px;
+      box-shadow: inset 0 0 5px #33ffff,
+                  inset 0 0 10px #66ffff;
+    }
+    nav ul li.items:hover:after{
+      opacity: 0;
+    }
+  }
 
-.navigation-items li:nth-last-of-type(1) {
-    margin-right: 0px;
-}
 
-.navigation-items li a {
-    font-family: Poppins, sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 20px;
-color: #FFFFFF;
-text-decoration: none;
-}
 
-/* HEADER */
-
-.header-container {
+/* Home Tulisan Animasi*/
+.home {
     display: flex;
     align-items: center;
-    height: 100vh;
+    height: 650px;
+    text-align: center;
+    background: #222;
 }
 
-header {
+
+.animation{
+    text-align: center;
+    font-family: 'roboto';
+    font-size: 55px;
+    letter-spacing: 1px;
+    color: antiquewhite;
+    display: inline-block;
+    animation: fadeIn 5s forwards;
+    opacity: 0;
+    transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.first{
+    display: inline-block;
+    animation: firstspan 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    z-index: 1;
+    font-weight: 500;
+}
+
+.slidee{
+    display: inline-flex;
+    overflow: hidden;
+}
+
+.second{
+    font-weight: 300;
+    z-index: -1;
+    display: inline-block;
+    animation: secondspan 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        transition-timing-function: scale(1);
+    }
+    50%{
+        opacity: 1;
+        transition-timing-function: scale(1);
+    }
+    100%{
+        opacity: 1;
+        transition-timing-function: scale(1);
+    }
+}
+
+@keyframes firstspan{
+    0%{
+        transform: translateX(250%);
+    }
+    60%{
+        transform: translateX(250%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes secondspan{
+    0%{
+        transform: translateX(-150%);
+    }
+    60%{
+        transform: translateX(-150%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+/* About */
+.about{
+    display: flex;
+    align-items: center;
+    height: 700px;
+    background:antiquewhite;
+}
+
+.diatas{
+    font-family: 'roboto';
+    font-size: 20px;
+    font-weight: medium;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: -80px;
+    color: #db2721;
+}
+
+.tengah{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-header .hey {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 58px;
-    line-height: 77px;
-    color: #264653;
-    margin-bottom: 5px;
-    animation: fade 2s;
-    animation-delay: 3.5s;
-    visibility: hidden;
-animation-fill-mode: forwards;
+.tengah .kiri{
+margin-left: -150px;
+margin-right: -10px;
+height: 650px;
+}
+
+.tengah .kanan{
+    font-family: 'roboto';
+    font-size: 24px;
+    color: #222;
+    margin-right: -10px;
+    text-align: justify;
+}
+
+.tengah .kanan .nama{
+    font-weight: 500;
+}
+
+.tengah .kanan .deskripsi{
+    font-weight: 300;
+}
+
+/* Project */
+
+.isi-project{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 700px;
+    background:#222;
+}
+
+.project .atas {
+    font-family: 'roboto';
+    font-size: 20px;
+    font-weight: medium;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: #34ceff;
+}
+
+.konten{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider {
+    width: 900px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 2;
+    margin-top: 25px;
+}
+
+.slides {
+    width: 600%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img{
+    width: 900px;
+    height: 400px;
+}
+        /*manual*/
+
+.manual {
+position: absolute;
+width: 900px;
+margin-top: 420px;
+display: flex;
+justify-content: center;
+
+}
+
+.manualbtn {
+    border: 2px solid #34ceff;
+    padding: 4px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manualbtn:not(:last-child){
+    margin-right: 30px;
+}
+
+.manualbtn:hover {
+    background: #34ceff;
+}
+
+#radio1:checked ~ .satu{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .satu{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .satu{
+    margin-left:-40%;
+}
+
+#radio4:checked ~ .satu{
+    margin-left: -60%;
+}
+
+#radio5:checked ~ .satu{
+    margin-left: -80%;
+}
+
+#radio6:checked ~ .satu{
+    margin-left: -100%;
+}
+
+    /*automaic navigation*/
+
+.auto {
+    position: absolute;
+    display: flex;
+    width: 900px;
+    justify-content: center;
+    margin-top: 420px;
+}
+
+.auto div{
+    border: 2px solid #34ceff;
+    padding: 4px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.auto div:not(:last-child){
+    margin-right: 30px;
+}
+
+#radio1:checked ~ .auto .autobutton1 {
+    background:#34ceff ;
+}
+
+#radio2:checked ~ .auto .autobutton2 {
+    background:#34ceff ;
+}
+
+#radio3:checked ~ .auto .autobutton3 {
+    background:#34ceff ;
+}
+
+#radio4:checked ~ .auto .autobutton4 {
+    background:#34ceff ;
+}
+
+#radio5:checked ~ .auto .autobutton5 {
+    background:#34ceff ;
+}
+
+#radio6:checked ~ .auto .autobutton6 {
+    background:#34ceff ;
+}
+
+    /* bekgron */
+
+.bgphoto {
+    display: flex;
+    position: absolute;
+    width: 900px;
+    height: 480px;
+    z-index: 0;
+    
+    background: linear-gradient(109.37deg, rgba(52, 206, 255, 0.4) 12.9%, rgba(47, 54, 118, 0.1) 77.62%);
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(20px);
+/* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 16px;
+}
+
+.bgphoto .overlay{
+    display: flex;
+    z-index: 1;
+    mix-blend-mode: overlay;
+    border-radius: 16px;
+    
+}
+
+/* SKILL */
+
+.skill{
+    display: flex;
+    height: 900px;
+    background:antiquewhite;
+    align-items: baseline;
+}
+
+.tulisan {
+    align-items: center;
+    background:#faebd7;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.judul {
+    font-family: 'roboto';
+    font-size: 20px;
+    font-weight: medium;
+    color: #db2721;
+}
+
+.cerita {
+    font-family: 'roboto';
+    font-size: 18px;
+    color: #222;
+    font-weight: 400;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 30px;
+    align-items: center;
+    text-align: center;
+}
+
+.jelas {
+    font-family: 'roboto';
+    font-size: 18px;
+    color: #222;
+    font-weight: 500;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 30px;
+    align-items: center;
+    text-align: center;
 }
 
 
-header .afdol {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 58px;
-    line-height: 77px;
-    color: #264653;
-    margin-bottom: 5px;
-    animation: fade 2s;
-    animation-delay: 4.5s;
-    visibility: hidden;
-animation-fill-mode: forwards;
+        /*bagian gambar gambar*/
+
+.baris1{
+    display: flex;
+    justify-content: center;
 }
 
-header .afdalio {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 58px;
-    line-height: 77px;
-    color: #264653;
-    margin-bottom: 5px;
-    animation: fade 2s;
-    animation-delay: 5s;
-    visibility: hidden;
-animation-fill-mode: forwards;
+.baris2{
+    display: flex;
+    justify-content: center;
 }
 
-header .reza {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 58px;
-    line-height: 77px;
-    color: #264653;
-    margin-bottom: 5px;
-    animation: fade 2s;
-    animation-delay: 5.5s;
-    visibility: hidden;
-animation-fill-mode: forwards;
+/* CONTACT ME*/
+
+.kontak-info {
+    display: flex;
+    height: 300px;;
+    align-items: baseline;
+    background: #222;
 }
 
-@keyframes fade {
-    0%{
-        opacity: 0;
-        visibility: visible;
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-    }
+.kontak {
+    align-items: center;
+    background:#222;
+    margin-top: 50px;
+    margin-bottom: 40px;
 }
 
-header p {
-    width: 725px;
-height: 224px;
-font-style: normal;
-font-weight: 600;
-font-size: 26px;
-line-height: 38px;
-text-align: justify;
-color: #264653;
-animation: fade-movedown 2s linear;
-animation-delay: 6.5s;
-    visibility: hidden;
-animation-fill-mode: forwards;
+.penjelasan{
+    font-family: 'roboto';
+    font-size: 45px;
+    font-weight: medium;
+    color: antiquewhite;
 }
 
-@keyframes fade-movedown {
-    0%{
-        opacity: 0;
-        transform: translateY(-50px);
-        visibility: visible;
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0px);
-        visibility: visible;
-        
-    }
+.email{
+    font-family: 'roboto';
+    font-size: 17px;
+    font-weight: medium;
+    color: antiquewhite;
 }
 
-/* Social Media */
+.imel{
+    text-decoration: underline;
+    text-transform: none;
+    color: antiquewhite;
+    font-family: 'roboto';
+    font-size: 17px;
+    font-weight: medium;
+}
 
-.social-media {
+.sosmed {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-    margin-top: 50px;
-    animation: moveup 1.5s linear 1 ;
-    animation-delay: 7s;
-    visibility: hidden;
-    animation-fill-mode: forwards;
 }
 
-@keyframes moveup {
-    0%{
-        transform: translatey(500px);
-        visibility: visible;
-    }
-    100%{
-        transform: translate(0px);
-        visibility: visible;
-    }
-}
-.social-media a {
+.sosmed a{
     margin-bottom: 0;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-right: 100px;
     transition: 300ms;
-
 }
 
-.social-media a:nth-last-of-type(1) {
+.sosmed a:nth-last-of-type(1) {
     margin-right: 0px;
 }
 
-.social-media a:hover {
+.sosmed a:hover {
     transform: translatey(-10px);
-}
-
-/* Head Image */
-
-header .head-image {
-    position: relative;
-    margin-bottom: 100px;
-    margin-left: 25px;
-}
-
-header .head-image img {
-    position: relative;
-    z-index: 100;
-    animation: fade 2s;
-    animation-delay: 6s;
-    visibility: hidden;
-animation-fill-mode: forwards;
-}
-
-@keyframes fade {
-    0%{
-        opacity: 0;
-        visibility: visible;
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-    }
-}
-
-@keyframes moveup {
-    0%{
-        transform: translatey(500px);
-        visibility: visible;
-    }
-    100%{
-        transform: translate(0px);
-        visibility: visible;
-    }
-}
-
-header .head-image .bg-photo {
-    position: absolute;
-    width: 350px;
-    height: 440px;
-    left: -25px;
-    top: -30px;
-    animation: moveright 1.5s linear 1 ;
-    animation-delay: 2.5s;
-visibility: hidden;
-animation-fill-mode: forwards;
-
-background: #E76F51;
-}
-
-@keyframes moveright {
-    0%{
-        transform: translatex(-500px);
-        visibility: visible;
-    }
-    100%{
-        transform: translate(0px);
-        visibility: visible;
-    }
 }
 
